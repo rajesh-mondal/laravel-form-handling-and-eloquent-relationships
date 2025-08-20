@@ -2,7 +2,7 @@
 
 @section('content')
    @include('component.hero')
-   @include('component.feature')
+   {{-- @include('component.feature') --}}
    <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {{-- Recent Articles --}}
         @include('component.recent-articles')
