@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('home');
@@ -9,3 +10,7 @@ Route::get('/', function () {
 Route::view('/', 'home');
 Route::view('/register', 'auth.registration');
 Route::view('/login', 'auth.login');
+Route::view('/admin', 'dashboard');
+
+
+Route::resource('categories', CategoryController::class);
