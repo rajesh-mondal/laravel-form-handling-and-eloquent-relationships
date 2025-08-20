@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
@@ -11,7 +12,9 @@ Route::get('/', function () {
 Route::view('/', 'home');
 Route::view('/register', 'auth.registration');
 Route::view('/login', 'auth.login');
-Route::view('/admin', 'dashboard');
+
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])
+    ->name('admin.dashboard');
 
 
 Route::resource('categories', CategoryController::class);
