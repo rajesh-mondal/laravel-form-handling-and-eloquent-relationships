@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
@@ -14,3 +15,4 @@ Route::view('/admin', 'dashboard');
 
 
 Route::resource('categories', CategoryController::class);
+Route::resource('posts', PostController::class);
