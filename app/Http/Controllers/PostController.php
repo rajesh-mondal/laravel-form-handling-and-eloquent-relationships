@@ -79,8 +79,8 @@ class PostController extends Controller {
 
     public function postsByCategory( $id ) {
         $category = Category::findOrFail( $id );
-        $posts = $category->posts;
+        $posts = $category->posts()->latest()->paginate(6);
 
-        return view( 'posts.by_category', compact( 'category', 'posts' ) );
+        return view( 'pages.posts.by_category', compact( 'category', 'posts' ) );
     }
 }
