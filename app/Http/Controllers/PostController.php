@@ -19,7 +19,7 @@ class PostController extends Controller {
      * Show the form for creating a new resource.
      */
     public function create() {
-        $categories = Category::all();
+        $categories = Category::paginate( 5 );
         return view( 'pages.posts.create', compact( 'categories' ) );
     }
 

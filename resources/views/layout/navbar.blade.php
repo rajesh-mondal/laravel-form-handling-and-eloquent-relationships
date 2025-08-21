@@ -10,14 +10,14 @@
         </button>
         <div id="dropdownMenu" 
              class="absolute left-0 w-64 bg-white rounded-md shadow-lg hidden z-50">
-            <div class="py-2">
+            {{-- <div class="py-2">
                 @foreach ($categories as $category)
                     <a href="{{ route('category.posts', $category->id) }}" 
                        class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
                         {{ $category->name }}
                     </a>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
     <a href="#" class="text-gray-600 hover:text-blue-600 transition">About</a>
