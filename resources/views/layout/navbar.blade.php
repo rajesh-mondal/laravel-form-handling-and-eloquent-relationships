@@ -1,5 +1,5 @@
 <nav class="hidden md:flex space-x-8 items-center">
-    <a href="./index.html" class="text-blue-600 font-medium">Home</a>
+    <a href="{{ '/' }}" class="text-blue-600 font-medium">Home</a>
     
     <!-- Categories Dropdown -->
     <div class="relative desktop-dropdown">
