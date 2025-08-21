@@ -76,4 +76,11 @@ class PostController extends Controller {
 
         return redirect()->route( 'posts.index' )->with( 'success', 'Post deleted successfully.' );
     }
+
+    public function postsByCategory( $id ) {
+        $category = Category::findOrFail( $id );
+        $posts = $category->posts;
+
+        return view( 'posts.by_category', compact( 'category', 'posts' ) );
+    }
 }

@@ -36,4 +36,7 @@
             Browse All Articles
         </a>
     </div>
+    {{-- <div class="mt-4">
+        {{ $posts->links() }}
+    </div> --}}
 </main>
